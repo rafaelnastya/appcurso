@@ -23,7 +23,7 @@
                   <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Categoria</label>
 
-                      <input type="text" name="nomecategoria" placeholder="Programação" />
+                      <input type="text" name="nomecategoria" placeholder="Exemplo: Programação" />
       
                   </div>
                   <div class="col-auto">
