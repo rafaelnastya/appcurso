@@ -18,9 +18,10 @@ class CursoController extends Controller
 
     public function cadastroCur(Request $request){
         $registrosCur = $request->validate([
+            'idcategoria'=> 'numeric|required',
             'nomecurso' => 'string|required',
             'cargahoraria' => 'string|required',
-            'valor' => 'decimal|required'
+            'valor' => 'numeric|required'
 
         ]);
 

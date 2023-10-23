@@ -17,9 +17,15 @@
             <div class="col-10 ">
               <div class="invoice-card card-style mb-30">
                 <div class="card-style mb-30 ">
-                  <h6 class="mb-25 fs-4" >Digite o nome do curso</h6>
+                  <h6 class="mb-25 fs-4" >Digite informações do curso.</h6>
                   <form method="post" action="{{route('cadastro-curso')}}">
                     @csrf
+                    <div class="input-style-1 fs-4 ">
+                    <label class="fs-4">ID da Categoria</label>
+ 
+                      <input type="text" name="idcategoria" placeholder="" />
+      
+                  </div>
                     <div class="input-style-1 fs-4 ">
                     <label class="fs-4">Nome do Curso</label>
  

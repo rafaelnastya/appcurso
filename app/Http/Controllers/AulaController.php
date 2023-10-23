@@ -18,7 +18,7 @@ class AulaController extends Controller
 
     public function cadastroAul(Request $request){
         $registrosAul = $request->validate([
-            'idcurso' => 'integer|required',
+            'idcurso' => 'numeric|required',
             'tituloaula' => 'string|required',
             'urlaula' => 'string|required'
         ]);
