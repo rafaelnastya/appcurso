@@ -11,11 +11,19 @@ Route::get('/',[CategoriaController::class,'index'])->name('index');
 //visualizar e cadastrar a categoria
 Route::get('/cadcategoria',[CategoriaController::class,'mostrarFormCat'])->name("form-cadastro-categoria");
 Route::post('/cadcategoria',[CategoriaController::class,'cadastroCat'])->name("cadastro-categoria");
+//visualizar e manipular categoria
+Route::get('/manipulacategoria',[CategoriaController::class,'mostrarManipulaCategoria'])->name("manipula-categoria");
+
 
 //visualizar e cadastrar curso
 Route::get('/cadcurso',[CursoController::class,'mostrarFormCurso'])->name("form-cadastro-curso");
 Route::post('/cadcurso',[CursoController::class,'cadastroCur'])->name("cadastro-curso");
+//visualizar e manipular curso
+Route::get('/manipulacurso',[CursoController::class,'mostrarManipulaCurso'])->name("manipula-curso");
+
 
 //visualizar e cadastrar aula
 Route::get('/cadaula',[AulaController::class,'mostrarFormAula'])->name("form-cadastro-aula");
 Route::post('/cadaula',[AulaController::class,'cadastroAul'])->name("cadastro-aula");
+//visualizar e manipular aula
+Route::get('/manipulaaula',[AulaController::class,'mostrarManipulaAula'])->name("manipula-aula");

@@ -12,6 +12,13 @@ class AulaController extends Controller
         return view('cad_aula');
     }
 
+    public function mostrarManipulaAula()
+    {
+        $registrosAula = Aula::All();
+
+        return view('manipula_aula',['registrosAula' => $registrosAula]);
+    }
+
     public function index(){
         return view('index');
     }

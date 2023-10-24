@@ -11,6 +11,13 @@ class CursoController extends Controller
     public function mostrarFormCurso(){
         return view('cad_curso');
     }
+    
+    public function mostrarManipulaCurso()
+    {
+        $registrosCurso = Curso::All();
+
+        return view('manipula_curso',['registrosCurso' => $registrosCurso]);
+    }
 
     public function index(){
         return view('index');
