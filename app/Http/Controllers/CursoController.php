@@ -23,17 +23,22 @@ class CursoController extends Controller
         return view('index');
     }
 
-    public function cadastroCur(Request $request){
+    public function cadastroCurso(Request $request){
         $registrosCur = $request->validate([
             'idcategoria'=> 'numeric|required',
             'nomecurso' => 'string|required',
             'cargahoraria' => 'string|required',
             'valor' => 'numeric|required'
-
         ]);
 
         Curso::create($registrosCur);
 
+        return Redirect::route('index');
+    }
+
+    public function deletarCurso(Curso $registrosCurso)
+    {
+        $registrosCurso->delete();
         return Redirect::route('index');
     }
 }
