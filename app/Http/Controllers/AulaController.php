@@ -24,13 +24,13 @@ class AulaController extends Controller
     }
 
     public function cadastroAul(Request $request){
-        $registrosAul = $request->validate([
+        $registrosAula = $request->validate([
             'idcurso' => 'numeric|required',
             'tituloaula' => 'string|required',
             'urlaula' => 'string|required'
         ]);
 
-        Aula::create($registrosAul);
+        Aula::create($registrosAula);
 
         return Redirect::route('index');
     }
