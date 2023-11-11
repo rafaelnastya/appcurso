@@ -25,6 +25,8 @@ Route::put('alterarbancocategoria/{registrosCategoria}',[CategoriaController::cl
 //apagar categoria
 Route::delete('/deletarcategoria/{registrosCategoria}',[CategoriaController::class,'deletarCategoria'])->name('deletar-categoria');
 
+
+
 //visualizar e cadastrar curso
 Route::get('/cadcurso',[CursoController::class,'mostrarFormCurso'])->name("form-cadastro-curso");
 Route::post('/cadcurso',[CursoController::class,'cadastroCurso'])->name("cadastro-curso");
@@ -34,6 +36,8 @@ Route::get('/manipulacurso',[CursoController::class,'mostrarManipulaCurso'])->na
 
 //apaga curso
 Route::delete('/deletarcurso/{registrosCurso}',[CursoController::class,'deletarCurso'])->name('deletar-curso');
+
+
 
 
 //visualizar e cadastrar aula
