@@ -37,7 +37,9 @@ Route::get('/manipulacurso',[CursoController::class,'mostrarManipulaCurso'])->na
 //apaga curso
 Route::delete('/deletarcurso/{registrosCurso}',[CursoController::class,'deletarCurso'])->name('deletar-curso');
 
-
+//alterar curso
+Route::get('/alteracurso/{registrosCurso}',[CursoController::class,'mostrarAlterarCur'])->name('alterar-curso');
+Route::put('alterabancocurso/{registrosCurso}',[CursoController::class,'executaAlterarCur'])->name('alterar-banco-curso');
 
 
 //visualizar e cadastrar aula
@@ -49,3 +51,7 @@ Route::get('/manipulaaula',[AulaController::class,'mostrarManipulaAula'])->name(
 
 //apaga aula
 Route::delete('/deletaraula/{registrosAula}',[AulaController::class,'deletarAula'])->name('deletar-aula');
+
+//alterar aula
+Route::get('/alteraraula/{registrosAula}',[AulaController::class,'mostrarAlterarAula'])->name('alterar-aula');
+Route::put('alterarbancoaula/{registrosAula}',[AulaController::class,'executaAlterarAula'])->name('alterar-banco-aula');

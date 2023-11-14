@@ -61,9 +61,8 @@ class CategoriaController extends Controller
             'nomecategoria' => 'string|required',
         ]);
 
-        $registrosCategoria->id;
-
-        $registrosCategoria::save($registrosCat);
+        $registrosCategoria->fill($registrosCat);
+        $registrosCategoria->save();
 
         //alert("Dados alterados.");
         return Redirect::route('index');

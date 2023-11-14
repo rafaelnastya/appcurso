@@ -24,13 +24,13 @@ class AulaController extends Controller
     }
 
     public function cadastroAul(Request $request){
-        $registrosAula = $request->validate([
+        $registrosAul = $request->validate([
             'idcurso' => 'numeric|required',
             'tituloaula' => 'string|required',
             'urlaula' => 'string|required'
         ]);
 
-        Aula::create($registrosAula);
+        Aula::create($registrosAul);
 
         return Redirect::route('index');
     }
@@ -40,4 +40,24 @@ class AulaController extends Controller
         $registrosAula->delete();
         return Redirect::route('index');
     }
+
+    public function mostrarAlterarAula(Aula $registrosAula)
+    {
+        return view('altera_aula',['registrosAula' => $registrosAula]);
+    }
+
+    public function executaAlterarAula(Aula $registrosAula, Request $request)
+    {
+        $registrosAul = $request->validate([
+            'tituloaula' => 'string|required',
+            'urlaula' => 'string|required',
+        ]);
+
+        $registrosAula->fill($registrosAul);
+        $registrosAula->save();
+
+        //alert("Dados alterados.");
+        return Redirect::route('index');
+    }
+
 }
